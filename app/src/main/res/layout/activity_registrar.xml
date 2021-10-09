@@ -21,7 +21,7 @@
                 style="@style/EstiloEtiqueta"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:text="Disciplina" />
+                android:text="Materia" />
 
             <EditText
                 android:id="@+id/txt_disciplina"
@@ -44,7 +44,7 @@
                 android:id="@+id/textView"
                 style="@style/EstiloEtiqueta"
                 android:layout_height="wrap_content"
-                android:text="Alumno" />
+                android:text="Estudiante" />
 
             <EditText
                 android:id="@+id/txt_alumno"

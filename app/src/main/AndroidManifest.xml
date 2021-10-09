@@ -21,6 +21,7 @@
 
         <activity android:name=".RegistrarActivity" />
         <activity android:name=".VerificarActivity" />
+        <activity android:name=".AyudaActivity" />
 
     </application>
 

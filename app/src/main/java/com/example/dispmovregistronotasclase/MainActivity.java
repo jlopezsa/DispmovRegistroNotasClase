@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button boton_registrar;
     private Button boton_verificar;
+    private Button boton_ayuda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         boton_registrar = (Button) findViewById(R.id.btn_registrar);
         boton_verificar = (Button) findViewById(R.id.btn_verificar);
+        boton_ayuda = (Button) findViewById(R.id.btn_ayuda);
 
         boton_registrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
                 lanzarVerificar(null);
             }
         });
+
+        boton_ayuda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lanzarAyuda(null);
+            }
+        });
     }
 
     public void lanzarRegistrar(View view){
@@ -43,6 +52,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void lanzarVerificar(View view){
         Intent i = new Intent(this,VerificarActivity.class);
+        startActivity(i);
+    }
+
+    public void lanzarAyuda(View view){
+        Intent i = new Intent(this,AyudaActivity.class);
         startActivity(i);
     }
 }

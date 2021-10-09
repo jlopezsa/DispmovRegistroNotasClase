@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Git/DispmovRegistroNotasClase/app/src/main/res/layout/activity_ayuda.xml" value="0.2617753623188406" />
         <entry key="..\:/Git/DispmovRegistroNotasClase/app/src/main/res/layout/activity_main.xml" value="0.35989583333333336" />
-        <entry key="..\:/Git/DispmovRegistroNotasClase/app/src/main/res/layout/activity_registrar.xml" value="0.35989583333333336" />
+        <entry key="..\:/Git/DispmovRegistroNotasClase/app/src/main/res/layout/activity_registrar.xml" value="0.25" />
         <entry key="..\:/Git/DispmovRegistroNotasClase/app/src/main/res/layout/activity_verificar.xml" value="0.35989583333333336" />
       </map>
     </option>
