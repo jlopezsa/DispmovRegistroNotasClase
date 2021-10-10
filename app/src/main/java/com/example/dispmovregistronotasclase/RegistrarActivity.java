@@ -1,6 +1,7 @@
 package com.example.dispmovregistronotasclase;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -55,10 +56,19 @@ public class RegistrarActivity extends Activity {
             @Override
             public void onClick(View view) {
                 corte_notas = new Corte();
-                corte_notas.setAutoevaluacion(Float.valueOf(in_autoevaluacion.getText().toString()));
-                corte_notas.setTrabajos(Float.valueOf(in_trabajos.getText().toString()));
-                corte_notas.setParcial(Float.valueOf(in_parcial.getText().toString()));
 
+                try {
+                    corte_notas.setAutoevaluacion(Float.valueOf(in_autoevaluacion.getText().toString()));
+                    corte_notas.setTrabajos(Float.valueOf(in_trabajos.getText().toString()));
+                    corte_notas.setParcial(Float.valueOf(in_parcial.getText().toString()));
+                }catch(Exception error_identificado){
+                    Log.i("TRY-CATCH","Las notas no son numeros reales");
+                    AlertDialog.Builder alerta = new AlertDialog.Builder(RegistrarActivity.this);
+                    alerta.setMessage("Ingrese numero real en notas");
+                    AlertDialog titulo = alerta.create();
+                    titulo.setTitle("Cuidado!");
+                    titulo.show();
+                }
                 // Asociaciones entre objetos
                 estudiante_reg.setNotas_corte(corte_notas);
                 estudiante_reg.calculatotal_corte();
